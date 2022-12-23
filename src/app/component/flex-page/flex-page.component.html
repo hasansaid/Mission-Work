@@ -1,0 +1,58 @@
+<div class="flex-container">
+    <div class="menu-items">
+        <div [ngStyle]="{backgroundColor:'#4C3575'}" (click)="color1()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#F24C4C'}" (click)="color2()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#FFC3C3'}" (click)="color3()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#809A6F '}" (click)="color4()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#646FD4 '}" (click)="color5()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#82DBD8 '}" (click)="color6()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#A64B2A '}" (click)="color7()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#9C0F48'}" (click)="color8()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#6867AC '}" (click)="color9()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#04293A '}" (click)="color10()">
+            <p>Change Color</p>
+        </div>
+        <div [ngStyle]="{backgroundColor:'#FFCC1D'}" (click)="color11()">
+            <p>Change Color</p>
+        </div>
+    </div>
+
+    <div class="main-area">
+        <div class="title">
+            <p>FLEX</p>
+        </div>
+
+        <form [formGroup]="form" class="form-area">
+            <input required type="text" formControlName="name" />
+            <input required="" type="text" formControlName="email" />
+            <input required="" type="text" formControlName="phone" />
+        </form>
+
+        <div class="buttons">
+            <button
+                [ngClass]="{'purple':(color$ | async)==1,'orange':(color$ | async)==2,'pink':(color$ | async)==3,'green':(color$ | async)==4,'blue':(color$ | async)==5,'turquoise':(color$ | async)==6,'brown':(color$ | async)==7,'burgundy':(color$ | async)==8,'blue2':(color$ | async)==9,'black':(color$ | async)==10,'yellow':(color$ | async)==11}"
+                (click)="clear()" [disabled]="form.pristine">CLEAR</button>
+            <button
+                [ngClass]="{'purple':(color$ | async)==1,'orange':(color$ | async)==2,'pink':(color$ | async)==3,'green':(color$ | async)==4,'blue':(color$ | async)==5,'turquoise':(color$ | async)==6,'brown':(color$ | async)==7,'burgundy':(color$ | async)==8,'blue2':(color$ | async)==9,'black':(color$ | async)==10,'yellow':(color$ | async)==11}"
+                [disabled]="form.invalid">SUBMIT</button>
+        </div>
+    </div>
+</div>

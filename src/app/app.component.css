@@ -1,0 +1,27 @@
+body {
+  height: 100%;
+  position: relative;
+  margin: -8px;
+}
+
+.area-container {
+  width: calc(100% - 190px);
+  padding-top: 100px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+.app {
+  width: 70%;
+}
+
+@media only screen and (max-width: 640px) {
+  .area-container {
+    width: 100%;
+  }
+  .app {
+    width: 85%;
+  }
+}

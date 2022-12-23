@@ -1,0 +1,135 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-items div {
+  width: 180px;
+  height: 35px;
+  border: 1px solid black;
+  background-color: pink;
+}
+.main-area {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.form-area {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-area input {
+  margin-top: 35px;
+  height: 70px;
+  border-radius: 15px;
+  border: 1px solid gray;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6d8299;
+  display: flex;
+  height: 35px;
+  color: aliceblue;
+  border-radius: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.buttons button {
+  width: 40%;
+  height: 70px;
+  font-size: 20px;
+  background-color: #99a799;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.buttons button:disabled {
+  opacity: 0.3;
+  cursor: no-drop;
+}
+.buttons button:hover {
+  opacity: 0.5;
+}
+
+.menu-items div {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-bottom: 7px;
+  border-radius: 10px;
+}
+.menu-items div:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.purple {
+  background-color: #4c3575 !important;
+}
+.orange {
+  background-color: #f24c4c !important;
+}
+.pink {
+  background-color: #ffc3c3 !important;
+}
+.green {
+  background-color: #809a6f !important;
+}
+.blue {
+  background-color: #646fd4 !important;
+}
+.turquoise {
+  background-color: #82dbd8 !important;
+}
+.brown {
+  background-color: #a64b2a !important;
+}
+.burgundy {
+  background-color: #9c0f48 !important;
+}
+.blue2 {
+  background-color: #6867ac !important;
+}
+.black {
+  background-color: #04293a !important;
+}
+.yellow {
+  background-color: #ffcc1d !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .menu-items {
+    margin-top: 80px;
+    padding-bottom: 30px;
+  }
+  .menu-items div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .main-area {
+    width: 100%;
+    margin: 0;
+  }
+  .form-area input {
+    height: 90px;
+  }
+  .title {
+    height: 50px;
+  }
+}

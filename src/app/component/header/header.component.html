@@ -1,0 +1,6 @@
+<div [ngClass]="{'purple':(color$|async)==1,'orange':(color$|async)==2,'pink':(color$|async)==3,'green':(color$|async)==4,'blue':(color$|async)==5,'turquoise':(color$|async)==6,'brown':(color$|async)==7,'burgundy':(color$|async)==8,'blue2':(color$|async)==9,'black':(color$|async)==10,'yellow':(color$|async)==11}"
+    class="header">
+    <p style="font-size: larger;">Total Change Color: {{count$ |async}} <button class="button-2" role="button"
+            (click)="reset()">Reset</button> </p>
+    <p style="font-size: larger;">Color Id: {{color$|async}}</p>
+</div>

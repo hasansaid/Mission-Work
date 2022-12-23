@@ -1,0 +1,65 @@
+.sidebar {
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 190px;
+  z-index: 1;
+  background-color: #11c992;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar div {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar div:hover {
+  background-color: #a5becc;
+  cursor: pointer;
+}
+.purple {
+  background-color: #4c3575 !important;
+}
+.orange {
+  background-color: #f24c4c !important;
+}
+.pink {
+  background-color: #ffc3c3 !important;
+}
+.green {
+  background-color: #809a6f !important;
+}
+.blue {
+  background-color: #646fd4 !important;
+}
+.turquoise {
+  background-color: #82dbd8 !important;
+}
+.brown {
+  background-color: #a64b2a !important;
+}
+.burgundy {
+  background-color: #9c0f48 !important;
+}
+.blue2 {
+  background-color: #6867ac !important;
+}
+.black {
+  background-color: #04293a !important;
+}
+.yellow {
+  background-color: #ffcc1d !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .sidebar {
+    display: none;
+  }
+}
