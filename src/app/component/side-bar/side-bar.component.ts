@@ -1,3 +1,4 @@
+import { Application } from './../models/application';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css'],
 })
 export class SideBarComponent implements OnInit {
+  applications: Application[] = [];
   color$: Observable<number>;
   constructor(private store: Store<{ color: number }>) {
     this.color$ = store.select('color');
