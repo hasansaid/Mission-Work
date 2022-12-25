@@ -41,9 +41,11 @@
         </div>
 
         <form [formGroup]="form" class="form-area">
-            <input required type="text" formControlName="name" />
-            <input required="" type="text" formControlName="email" />
-            <input required="" type="text" formControlName="phone" />
+            <input style="padding-left:20px" placeholder="Enter your fullname..." type="text"
+                formControlName="fullname" />
+            <input style="padding-left:20px" placeholder="Enter your email... " type="text" formControlName="email" />
+            <input style="padding-left:20px" placeholder="Enter your phone number..." type="text"
+                formControlName="phone" />
         </form>
 
         <div class="buttons">
@@ -52,7 +54,7 @@
                 (click)="clear()" [disabled]="form.pristine">CLEAR</button>
             <button
                 [ngClass]="{'purple':(color$ | async)==1,'orange':(color$ | async)==2,'pink':(color$ | async)==3,'green':(color$ | async)==4,'blue':(color$ | async)==5,'turquoise':(color$ | async)==6,'brown':(color$ | async)==7,'burgundy':(color$ | async)==8,'blue2':(color$ | async)==9,'black':(color$ | async)==10,'yellow':(color$ | async)==11}"
-                [disabled]="form.invalid">SUBMIT</button>
+                (click)="addApplication()" routerLink="/application-page" [disabled]="form.invalid">SUBMIT</button>
         </div>
     </div>
 </div>

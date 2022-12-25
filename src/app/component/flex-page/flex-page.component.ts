@@ -1,3 +1,4 @@
+import { ApplicationService } from '../../services/application.service';
 import { changeColor } from './../store/color.actions';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -21,7 +22,8 @@ export class FlexPageComponent implements OnInit {
   color$: Observable<number>;
   constructor(
     private store: Store<{ color: number; count: number }>,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private applicationService: ApplicationService
   ) {
     this.color$ = store.select('color');
     this.count$ = store.select('count');
@@ -35,17 +37,21 @@ export class FlexPageComponent implements OnInit {
   ngOnInit(): void {
     this.createForm();
   }
-  clear() {
-    this.form.reset();
-  }
+
   createForm() {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required],
+      fullname: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
     });
   }
+  addApplication() {
+    this.applicationService.addApplication(this.form.value).subscribe();
+  }
 
+  clear() {
+    this.form.reset();
+  }
   color1() {
     this.colorChange(1);
   }

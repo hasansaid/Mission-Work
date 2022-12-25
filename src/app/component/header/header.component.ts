@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   count$: Observable<number>;
+
   color$: Observable<number>;
   constructor(private store: Store<{ color: number; count: number }>) {
     this.color$ = store.select('color');

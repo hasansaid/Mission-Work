@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Edit Application</title>
+</head>
+
+<body>
+    <form method="post" [formGroup]="editForm" *ngIf="editForm">
+        <h1>{{application.fullname}}</h1>
+
+        <fieldset>
+            <label for="name">Fullname:</label>
+            <input formControlName="fullname" type="text" id="name" />
+        </fieldset>
+        <fieldset>
+            <label for="name">Email:</label>
+            <input formControlName="email" type="text" id="name" />
+        </fieldset>
+        <fieldset>
+            <label for="name">Phone:</label>
+            <input formControlName="phone" type="text" id="name" />
+        </fieldset>
+
+
+        <button class="button" routerLink="/application-page" type="submit">
+            Geri Dön
+        </button>
+        <button class="buttonA" (click)="editApplication()" routerLink="/application-page" type="submit">
+            Düzenle
+        </button>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>APPLICATION-LIST</h2>
+    <ul class="responsive-table">
+        <li class="table-header">
+            <div class="col col-1"> Id</div>
+            <div class="col col-2">Fullname</div>
+            <div class="col col-3">Email</div>
+            <div class="col col-4">Phone Number</div>
+            <div class="col col-4"></div>
+            <div class="col col-4"></div>
+        </li>
+        <li class="table-row" *ngFor="let application of applications">
+            <div class="col col-1" data-label="Job Id">{{application.id}}</div>
+            <div class="col col-2" data-label="Customer Name">{{application.fullname}}</div>
+            <div class="col col-3" data-label="Amount">{{application.email}}</div>
+            <div class="col col-4" data-label="Payment Status">{{application.phone}}</div>
+            <div class="col col-4" data-label="Payment Status"><button routerLink="/edit-page/{{application.id}}"
+                    class="button-1" role="button">Edit</button>
+            </div>
+            <div (click)="deleteApplication(application.id)" class="col col-4" data-label="Payment Status"><button
+                    class="button-2" role="button">Delete</button>
+            </div>
+        </li>
+    </ul>
+</div>
