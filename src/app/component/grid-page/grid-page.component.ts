@@ -40,7 +40,7 @@ export class GridPageComponent implements OnInit {
 
   createForm() {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required],
+      fullname: ['', Validators.required],
       email: ['', Validators.required],
       phone: ['', Validators.required],
     });
