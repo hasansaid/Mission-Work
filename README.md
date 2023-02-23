@@ -1,12 +1,10 @@
 # New Features
 
-![features](https://github.com/hasansaid/AlphaStellarCase/blob/master/new%20features.gif)
-
+![önizleme](https://github.com/hasansaid/AlphaStellarCase/blob/master/önizleme.gif)
 
 # Preview
 
-![önizleme](https://github.com/hasansaid/AlphaStellarCase/blob/master/önizleme.gif)
-
+![features](https://github.com/hasansaid/AlphaStellarCase/blob/master/new%20features.gif)
 
 
 
